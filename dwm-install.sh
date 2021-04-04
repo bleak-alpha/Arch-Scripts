@@ -33,6 +33,7 @@ exec dwm" >> .xinitrc
 #NOTE:If you have more than one gui environment, manually configure the xinitrc
 
 printf "Downloading And Setting Up DWM"
+git clone https://github.com/bleak-alpha/walls.git
 git clone https://github.com/bleak-alpha/dwm-set.git "$HOME"/Downloads/
 cd Downloads/dwm-set/dwm-6.2/
  make clean install
