@@ -72,7 +72,7 @@ chmod +x aur-packages.sh
 After its done installing `paru`, `paru` will download and install these aur packages:
 * `birdtray` Thunderbird Email systray
 * `pnmixer` PulseAudio systray
-* `brave-bin` Brave, A chromium-based web browser (I have a potato laptop so i cant afford to compile)
+* `brave-bin` Brave, A chromium-based web browser (I have a potato laptop so I cant afford to compile)
 * `pulseaudio-modules-bt` AptX Bluetooth Drivers (for my headphones)
 * `sublime-text-3` A GUI text editor
 * `spotify` A music streaming service (as if you didn't know)
@@ -83,3 +83,30 @@ After its done installing `paru`, `paru` will download and install these aur pac
 * `ttf-mac-fonts` Mac emojis
 * `betterlockscreen` Lockscreen when laptop is suspended or on stand-by
 
+
+#### IV. ZSH Installation
+`zsh-install.sh` script will install zsh shell and oh-my-zsh framework. It will also change your default shell as zsh (btw its better than bash)
+>WIP: I have to make a dotfile backup and implement zsh dotfiles restoration in this script. Currently I have only writtern command to change the propmt theme.
+>NOTE: If you already have your dotfiles mention them in your copy of script (it is basically just copy and pasting commands).
+Just make this executible and run it WITHOUT sudo.
+```
+chmod +x zsh-install.sh
+./zsh-install.sh
+```
+And you are done.
+
+#### V. My Programming Essentials
+`programming-essentials.sh` script will install some of my essential programming tools and applications which are:
+* `wine` Windows compatibility layer to run MS-Windows Application (mainly Borland C++, cause gcc acts weird in my laptop)
+* `code` Visual Studio Code to execute and write code in various languages (btw I also use neovim so don't bash me as normie)
+* `gnome-keyring` To store crendentials in VS Code
+* `python` Python shell for programming
+* `jre-openjdk` Java Runtime Environment for writing and testing Java code
+* `rust` Rust programming language to create and test applications
+* `ghc` `cabal-install` `stack` Tools needed to run HasKell Server, and to test HasKell code.
+Just make script executible and run it as sudo.
+```
+chmod +x programming-essentials.sh
+sudo ./programming-essentials.sh
+```
+These are my required applications. If you have some other requirments, make changes that fit your needs and run the script ;) and its not that hard to create shell scripts if you are already familiar with programming, it took me around 30 mins to understand few syntaxes and control structures.
