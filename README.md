@@ -54,4 +54,32 @@ Just make this script executible and run it as sudo.
 chmod +x gnome-install.sh
 sudo ./gnome-install.sh
 ```
-The script will automatically 
+The script will automatically create an xinitrc file (if not present) and make required changes to it to start gnome with x automatically.
+If you want to start gnome with a display manager, it will have gdm installed with it. Just enable the gdm service and start it
+```
+sudo systemctl enable --now gdm
+sudo systemctl start gdm
+```
+
+
+#### III. AUR Packages:
+`aur-packages.sh` script will install `paru`; it is an aur-pacman wrapper with similar commands and flags to `pacman`, [click here](https://github.com/morganamilo/paru).
+Just make this script executible and run it WITHOUT sudo.
+```
+chmod +x aur-packages.sh
+./aur-packages.sh
+```
+After its done installing `paru`, `paru` will download and install these aur packages:
+					*`birdtray` Thunderbird Email systray
+					*`pnmixer` PulseAudio systray
+					*`brave-bin` Brave, A chromium-based web browser (I have a potato laptop so i cant afford to compile)
+					*`pulseaudio-modules-bt` AptX Bluetooth Drivers (for my headphones)
+					*`sublime-text-3` A GUI text editor
+					*`spotify` A music streaming service (as if you didn't know)
+					*`spotifywm-git` A module to run spotify on tiling window managers
+					*`protnvpn-cli-ng` OpenVPN based ProtonVPN CLI client
+					*`timeshift-bin` Application to backup and restore system using snapshots
+					*`ttf-google-fonts-typewolf` Font pack from google which has a better font collection
+					*`ttf-mac-fonts` Mac emojis
+					*`betterlockscreen` Lockscreen when laptop is suspended or on stand-by
+
