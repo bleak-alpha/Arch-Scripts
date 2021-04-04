@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-sudo pacman -S zsh
+sudo pacman -S zsh powerline-fonts
 
 chsh -s $(which zsh)
 
@@ -7,7 +7,7 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #changes to zshrc
-sed 's/# ZSH_THEME="robbyrussel"/ZSH_THEME="agnoster"/' .zshrc
+sed -i 's/ZSH_THEME="robbyrussel"/ZSH_THEME="agnoster"/g' .zshrc
 
 
 #make dotfiles backup to github....
