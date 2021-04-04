@@ -6,8 +6,16 @@ printf "Installing KDE and KDE-Applications"
 pacman -S --noconfirm kde-applications plasma
 
 printf "Setting Up xinitrc"
-cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
-sed '51,56d' $HOME/.xinitrc
+if [ -e .xinitrc ]
+then
+    if [ "$(sed -n '51p' "$HOME"/.xinitrc)" = "twm &" ] 
+    then
+        sed '51,56d' "$HOME"/.xinitrc
+    fi
+else
+    cp /etc/X11/xinit/xinitrc "$HOME"/.xinitrc
+    sed '51,56d' "$HOME"/.xinitrc
+fi
 echo 
 ":'KDE xinit'
 export DESKTOP_SESSION=plasma &
