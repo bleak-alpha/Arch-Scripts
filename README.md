@@ -70,16 +70,16 @@ chmod +x aur-packages.sh
 ./aur-packages.sh
 ```
 After its done installing `paru`, `paru` will download and install these aur packages:
-*`birdtray` Thunderbird Email systray
-*`pnmixer` PulseAudio systray
-*`brave-bin` Brave, A chromium-based web browser (I have a potato laptop so i cant afford to compile)
-*`pulseaudio-modules-bt` AptX Bluetooth Drivers (for my headphones)
-*`sublime-text-3` A GUI text editor
-*`spotify` A music streaming service (as if you didn't know)
-*`spotifywm-git` A module to run spotify on tiling window managers
-*`protnvpn-cli-ng` OpenVPN based ProtonVPN CLI client
-*`timeshift-bin` Application to backup and restore system using snapshots
-*`ttf-google-fonts-typewolf` Font pack from google which has a better font collection
-*`ttf-mac-fonts` Mac emojis
-*`betterlockscreen` Lockscreen when laptop is suspended or on stand-by
+      * `birdtray` Thunderbird Email systray
+      * `pnmixer` PulseAudio systray
+      * `brave-bin` Brave, A chromium-based web browser (I have a potato laptop so i cant afford to compile)
+      * `pulseaudio-modules-bt` AptX Bluetooth Drivers (for my headphones)
+      * `sublime-text-3` A GUI text editor
+      * `spotify` A music streaming service (as if you didn't know)
+      * `spotifywm-git` A module to run spotify on tiling window managers
+      * `protnvpn-cli-ng` OpenVPN based ProtonVPN CLI client
+      * `timeshift-bin` Application to backup and restore system using snapshots
+      * `ttf-google-fonts-typewolf` Font pack from google which has a better font collection
+      * `ttf-mac-fonts` Mac emojis
+      * `betterlockscreen` Lockscreen when laptop is suspended or on stand-by
 
