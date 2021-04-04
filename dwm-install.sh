@@ -25,5 +25,12 @@ echo
 
  printf "Downloading And Setting Up DWM"
  git clone https://github.com/bleak-alpha/dwm-set.git $HOME/Downloads/
- cd Downloads/dwm-set/
- 
+ cd Downloads/dwm-set/dwm-6.2/
+ make clean install
+ cd .. && cd dmenu-5.0/
+ make clean install
+cd .. && cd slstatus/
+make clean install
+cd .. && cd st-0.8.2/
+make clean install
+cp 30-touchpad-Laptop-touchpad-conf.conf /etc/X11/xorg.conf.d/30-touchpad.conf
