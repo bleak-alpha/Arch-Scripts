@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 printf "Installing X-Org"
-pacman -S xorg xorg-xinit xorg-xsetroot arandr firefox thunderbird dunst feh picom git wget curl wget neovim vim ttf-fira-code
+pacman -S xorg xorg-xinit xorg-xsetroot arandr firefox thunderbird dunst feh picom git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-fontawesome powerline-fonts awesome-terminal-fonts
 
 printf "Setting Up xinitrc"
 cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
@@ -34,3 +34,9 @@ make clean install
 cd .. && cd st-0.8.2/
 make clean install
 cp 30-touchpad-Laptop-touchpad-conf.conf /etc/X11/xorg.conf.d/30-touchpad.conf
+
+printf "Installing Paru"
+cd && cd Downloads/
+git clone https://aur.archlinux.org/paru.git
+cd paru/
+makepkg -si PKGBUILD
