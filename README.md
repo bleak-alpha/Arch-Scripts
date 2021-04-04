@@ -96,7 +96,7 @@ chmod +x zsh-install.sh
 And you are done.
 
 #### V. My Programming Essentials
-`programming-essentials.sh` script will install some of my essential programming tools and applications which are:
+`programming-essentials.sh` script will make some changes to `etc/pacman.conf` and include `multilib` repostory and install some of my essential programming tools and applications which are:
 * `wine` Windows compatibility layer to run MS-Windows Application (mainly Borland C++, cause gcc acts weird in my laptop)
 * `code` Visual Studio Code to execute and write code in various languages (btw I also use neovim so don't bash me as normie)
 * `gnome-keyring` To store crendentials in VS Code
