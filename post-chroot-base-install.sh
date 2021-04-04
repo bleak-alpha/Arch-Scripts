@@ -46,4 +46,4 @@ mkdir /home/bleak/Downloads
 git clone https://github.com/bleak-alpha/Arch-Scripts.git /home/bleak/
 
 printf "Script Has Finished Installation...."
-rm -fr Arch-Scripts/
+rm -fr /Arch-Scripts/

@@ -6,31 +6,6 @@ git clone https://aur.archlinux.org/paru.git
 cd paru/
 makepkg -si PKGBUILD
 rm -fr paru/
+cd 
 
-printf "Installing Birdtray"
-cd "$HOME"/Downloads/
-git clone https://aur.archlinux.org/birdtray.git
-cd birdtray/
-makepkg -si PKGBUILD
-rm -fr birdtray/
-
-printf "Installing pnmixer"
-cd "$HOME"/Downloads/
-https://aur.archlinux.org/pnmixer.git
-cd pnmixer/
-makepkg -si PKGBUILD
-cd .. && rm -fr pnmixer/
-
-printf "Installing Brave"
-cd "$HOME"/Downloads/
-https://aur.archlinux.org/brave-bin.git
-cd brave-bin/
-makepkg -si PKGBUILD
-cd .. && rm -fr brave-bin/
-
-printf "Installing AptX Drivers"
-cd "$HOME"/Downloads/
-https://aur.archlinux.org/pulseaudio-modules-bt.git
-cd pulseaudio-modules-bt/
-makepkg -si PKGBUILD
-cd .. && rm -fr pulseaudio-modules-bt/
+paru -Syy birdtray pnmixer brave-bin pulseaudio-modules-bt sublime-text-3 spotify spotifywm-git protonvpn-cli-ng timeshift-bin ttf-google-fonts-typewolf ttf-mac-fonts betterlockscreen 
