@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
 printf "Setting up Locales and timezone"
 timedatectl set-ntp true

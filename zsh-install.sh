@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 sudo pacman -S zsh
 
 chsh -s $(which zsh)

@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
 printf "Installing Paru"
 cd "$HOME"/Downloads/

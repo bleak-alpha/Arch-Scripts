@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
 printf "installing Base Packages...."	
 pacstrap -i /mnt base base-devel linux linux-firmware linux-headers vi vim git nvim
