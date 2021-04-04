@@ -25,6 +25,9 @@ do
  esac
 done
 
-echo "Script will change the root directory now"
+echo "Generating the fstab file...."
+genfstab -U /mnt >> /mnt/etc/fstab
+cat /mnt/etc/fstab
 
+echo "Changing root directory...."
 arch-chroot /mnt
