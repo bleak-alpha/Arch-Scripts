@@ -1,15 +1,5 @@
 #!/usr/bin/sh
 
-printf "installing Base Packages...."	
-pacstrap -i /mnt base base-devel linux linux-firmware linux-headers vim nvim}
-
-printf "Generating the fstab file...."
-genfstab -U /mnt >> /mnt/etc/fstab
-cat /mnt/etc/fstab
-
-printf "Changing root directory...."
-arch-chroot /mnt
-
 printf "Setting up Locales and timezone"
 ln -sf /usr/share/zoneinfo/Asia/Kolkatta /etc/localtime
 hwclock --systohc
@@ -31,3 +21,8 @@ passwd bleak
 printf "Making Changes to sudoers file...."
 cp /etc/sudoers /etc/sudoers.bkp
 echo "wheel ALL=(ALL) ALL" >> /etc/sudoers
+
+printf "Installing Neccessary Packages...."
+pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet iwd mtools dosfstools reflector xdg-user-dirs xdg-utils inetutils dnsutils bluez bluez-utils alsa-utils pulseaudio openssh rsync reflector acpi acpi_call acpid ebtables iptables ipset firewalld flatpak os-prober
+printf "Enabling Neccessary Services"
+
