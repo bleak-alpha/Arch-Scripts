@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 sudo pacman -S zsh powerline-fonts
 
 chsh -s $(which zsh)

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 printf "Setting up Locales and timezone"
 timedatectl set-ntp true
@@ -20,11 +20,11 @@ useradd -g users -G  power,storage,wheel,audio,video -m bleak
 printf "Password For bleak: "
 passwd bleak
 printf "Making Changes to sudoers file...."
-cp /etc/sudoers /etc/sudoers.bkp #Backing up sudoers file in case I fucked up
+cp /etc/sudoers /etc/sudoers.bkp #Backing up sudoers file in case I fuck up
 echo "wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 printf "Installing Neccessary Packages...."
-pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet iwd dhcpd mtools dosfstools xdg-user-dirs xdg-utils inetutils dnsutils bluez bluez-utils alsa-utils pulseaudio libldac openssh rsync reflector acpi acpi_call acpid ebtables iptables ipset firewalld flatpak os-prober
+pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet iwd dhcpd mtools dosfstools xdg-user-dirs xdg-utils inetutils dnsutils bluez bluez-utils alsa-utils pulseaudio libldac openssh rsync acpi acpi_call acpid ebtables iptables ipset firewalld flatpak os-prober
 
 printf "Enabling Neccessary Services"
 systemctl enable NetworkManager
@@ -33,6 +33,7 @@ systemctl enable bluetooth
 systemctl enable sshd
 systemctl enable firewalld
 systemctl enable acpid
+systemctl enable iwd
 
 printf "Installing Grub And Generating Config File...."
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB

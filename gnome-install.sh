@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 printf "Installing X-Org"
 pacman -S xorg xorg-xinit xorg-xsetroot arandr firefox git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-fontawesome powerline-fonts awesome-terminal-fonts
 

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 printf "Installing Paru...."
 git clone https://aur.archlinux.org/paru.git $"HOME"/Downloads/
