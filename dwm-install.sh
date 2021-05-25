@@ -1,9 +1,9 @@
 #!/bin/sh
 printf "Installing X-Org"
-pacman -S xorg xorg-xinit xorg-xsetroot arandr pavucontrol blueman firefox thunderbird dunst feh picom git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-fontawesome powerline-fonts awesome-terminal-fonts lxappearance
+sudo pacman -Syy --asdeps --noconfirm xorg xorg-server xorg-xinit xorg-xsetroot arandr pavucontrol blueman firefox thunderbird dunst feh picom git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-font-awesome powerline-fonts awesome-terminal-fonts lxappearance
 
 printf "Setting Up xinitrc"
-if [ -e .xinitrc ]
+if [ -e $HOME/.xinitrc ]
 then
     if [ "$(sed -n '51p' "$HOME"/.xinitrc)" = "twm &" ] 
     then
@@ -33,15 +33,15 @@ exec dwm" >> .xinitrc
 #NOTE:If you have more than one gui environment, manually configure the xinitrc
 
 printf "Downloading And Setting Up DWM"
-git clone https://github.com/bleak-alpha/walls.git
-git clone https://github.com/bleak-alpha/dwm-set.git "$HOME"/Downloads/
-cd Downloads/dwm-set/dwm-6.2/
- make clean install
+git clone https://github.com/bleak-alpha/walls.git $HOME/walls/
+git clone https://github.com/bleak-alpha/dwm-set.git $HOME/dwm-set/
+cd $HOME/dwm-set/dwm-6.2/
+make clean install
 cd .. && cd dmenu-5.0/
- make clean install
+make clean install
 cd .. && cd slstatus/
- make clean install
+make clean install
 cd .. && cd st-0.8.2/
- make clean install
+make clean install
 cd ..
- cp 30-touchpad-Laptop-touchpad-conf.conf /etc/X11/xorg.conf.d/30-touchpad.conf
+cp 30-touchpad-Laptop-touchpad-conf.conf /etc/X11/xorg.conf.d/30-touchpad.conf
