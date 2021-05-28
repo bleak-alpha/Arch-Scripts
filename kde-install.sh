@@ -16,7 +16,7 @@ else
     sudo cp -r /etc/X11/xinit/xinitrc "$HOME"/.xinitrc
     sudo sed '51,56d' "$HOME"/.xinitrc
 fi
-echo 
-":'KDE xinit'
+
+sudo echo ":'KDE xinit'
 export DESKTOP_SESSION=plasma &
 exec startplasma-x11" >> .xinitrc
