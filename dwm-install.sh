@@ -1,20 +1,20 @@
 #!/bin/sh
 printf "Installing X-Org"
-sudo pacman -Syy --asdeps --noconfirm xorg xorg-server xorg-xinit xorg-xsetroot arandr pavucontrol blueman firefox thunderbird dunst feh picom git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-font-awesome powerline-fonts awesome-terminal-fonts lxappearance
+sudo pacman -Syy --asdeps --noconfirm xorg xorg-server xorg-xrandr xorg-xinit xorg-xsetroot arandr pavucontrol blueman firefox thunderbird dunst feh picom git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-font-awesome powerline-fonts awesome-terminal-fonts lxappearance
 
 printf "Setting Up xinitrc"
 if [ -e $HOME/.xinitrc ]
 then
-    if [ "$(sed -n '51p' "$HOME"/.xinitrc)" = "twm &" ] 
+    if [ "$(sed -n '51p' $HOME/.xinitrc)" = "twm &" ] 
     then
-        sed '51,56d' "$HOME"/.xinitrc
+        sudo sed '51,56d' $HOME/.xinitrc
     fi
 else
-    cp /etc/X11/xinit/xinitrc "$HOME"/.xinitrc
-    sed '51,56d' "$HOME"/.xinitrc
+    sudo cp -r /etc/X11/xinit/xinitrc $HOME/.xinitrc
+    sudo sed '51,56d' $HOME/.xinitrc
 fi
-echo 
-":'DWM xinit'
+
+sudo echo ":'DWM xinit'
 #autostart
 exec slstatus &
 exec dunst &
