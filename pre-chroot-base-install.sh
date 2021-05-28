@@ -1,7 +1,7 @@
 #!/bin/sh
 
 printf "Installing Base Packages...."	
-pacstrap -i /mnt base base-devel linux linux-firmware linux-headers vi vim git nvim
+pacstrap -i /mnt base base-devel linux linux-firmware linux-headers vi vim neovim git
 
 printf "Generating the fstab file...."
 genfstab -U /mnt >> /mnt/etc/fstab
