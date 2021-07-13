@@ -24,7 +24,7 @@ cp /etc/sudoers /etc/sudoers.bkp; #Backing up sudoers file in case I fuck up
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 printf "Installing Neccessary Packages...."
-pacman -S --noconfirm rsync iptables eptables gufw grub efibootmgr networkmanager network-manager-applet iwd dhcpcd mtools dosfstools xdg-user-dirs xdg-utils inetutils dnsutils bluez bluez-utils alsa-utils pulseaudio libldac openssh os-prober
+pacman -S --noconfirm rsync iptables eptables gufw grub efibootmgr networkmanager network-manager-applet iwd dhcpcd mtools dosfstools xdg-user-dirs xdg-utils inetutils dnsutils bluez bluez-utils alsa-utils pulseaudio openssh os-prober xbindkeys 
 
 printf "Enabling Neccessary Services"
 systemctl enable NetworkManager
