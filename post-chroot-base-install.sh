@@ -24,7 +24,7 @@ cp /etc/sudoers /etc/sudoers.bkp; #Backing up sudoers file in case I fuck up
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 printf "Installing Neccessary Packages...."
-pacman -S --noconfirm rsync iptables eptables gufw grub efibootmgr networkmanager network-manager-applet iwd dhcpcd mtools dosfstools xdg-user-dirs xdg-utils inetutils dnsutils bluez bluez-utils alsa-utils pulseaudio openssh os-prober xbindkeys acpi acpid 
+pacman -S --noconfirm rsync iptables eptables gufw grub efibootmgr networkmanager iwd dhcpcd mtools dosfstools xdg-user-dirs xdg-utils inetutils dnsutils bluez bluez-utils alsa-utils pulseaudio openssh os-prober xbindkeys acpi acpid p7zip udisks2 
 
 printf "Enabling Neccessary Services"
 systemctl enable NetworkManager
@@ -39,9 +39,4 @@ printf "Installing Grub And Generating Config File...."
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 #Comment lines 40 and 41 if you have want to configure dual-boot
 mkdir /winboot
-mount /dev/sda /winboot #here /dev/sda1 is windows efi partition yours may vary
-grub-mkconfig -o /boot/grub/grub.cfg
-
-printf "Script Has Finished Installation...."
-
-printf "Copy the Scripts to Home To continue Installation"
+mount /dev/sda /winboot #here /dev/sda1 is windows efi partition yours may vary grub-mkconfig -o /boot/grub/grub.cfg printf "Script Has Finished Installation...." printf "Copy the Scripts to Home To continue Installation"
