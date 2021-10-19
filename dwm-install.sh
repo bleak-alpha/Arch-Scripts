@@ -1,6 +1,7 @@
 #!/bin/sh
 printf "\nInstalling X-Org"
 sudo pacman -Syy --noconfirm xorg xorg-server xorg-xrandr xorg-xinit xorg-xsetroot arandr xbindkeys pavucontrol blueman firefox thunderbird dunst feh picom git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-font-awesome powerline-fonts awesome-terminal-fonts lxappearance materia-gtk-theme xbindkeys playerctl pcmanfm ranger fbv eog deepin-screenshot gimp cmus mpv vlc cheese android-file-transfer curtail otf-fira-mono noto-fonts-emoji gnu-free-fonts noto-fonts 
+#test1
 
 printf "\nSetting Up xinitrc"
 wget https://raw.githubusercontent.com/bleak-alpha/dotfiles/master/.xinitrc
