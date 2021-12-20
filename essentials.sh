@@ -4,5 +4,6 @@
 sed -i 's/#[multilib]/[multilib]/g' /etc/pacman.conf
 sed -i 's+#Include = /etc/pacman.d/mirrorlist+Include = /etc/pacman.d/mirrorlist+g' /etc/pacman.conf
 
-pacman -Syy --noconfirm --asdeps wine code gnome-keyring python jre-openjdk rust golang ghc cabal-install stack mpv vlc libreoffice-fresh;
+sudo pacman -Syy --noconfirm --asdeps wine 
+sudo pacman -S code gnome-keyring python jre-openjdk rust golang ghc cabal-install stack mpv libreoffice-fresh;
 

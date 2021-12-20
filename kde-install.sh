@@ -1,9 +1,9 @@
 #!/bin/sh
 printf "Installing X-Org"
-pacman -Syy --noconfirm --asdeps xorg xorg-sever xorg-xinit xorg-xsetroot arandr firefox git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-fontawesome powerline-fonts awesome-terminal-fonts
+sudo pacman -Syy --noconfirm --asdeps xorg xorg-sever xorg-xinit xorg-xsetroot arandr firefox git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-fontawesome powerline-fonts awesome-terminal-fonts
 
 printf "Installing KDE and KDE-Applications"
-pacman -S --noconfirm --asdeps kde-applications plasma
+sudo pacman -S --noconfirm --asdeps kde-applications plasma
 
 printf "Setting Up xinitrc"
 if [ -e .xinitrc ]

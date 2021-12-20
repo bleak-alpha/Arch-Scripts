@@ -1,9 +1,9 @@
 #!/bin/sh
 printf "Installing X-Org"
-pacman -S --noconfirm --asdeps xorg xorg-xinit xorg-xsetroot xorg-xrandr arandr firefox git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-fontawesome powerline-fonts awesome-terminal-fonts
+sudo pacman -S --noconfirm --asdeps xorg xorg-xinit xorg-xsetroot xorg-xrandr arandr firefox git wget curl wget neovim vim ttf-fira-code ttf-font-awesome otf-fontawesome powerline-fonts awesome-terminal-fonts
 
 printf "Installing Gnome and Gnome-Applications"
-pacman -S --noconfirm --asdeps gnome gnome-extra
+sudo pacman -S --noconfirm gnome gnome-extra
 
 printf "Setting Up xinitrc"
 if [ -e .xinitrc ]
