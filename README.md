@@ -84,18 +84,7 @@ After its done installing `paru`, `paru` will download and install these aur pac
 * `betterlockscreen` Lockscreen when laptop is suspended or on stand-by
 
 
-#### IV. ZSH Installation
-`zsh-install.sh` script will install zsh shell and oh-my-zsh framework. It will also change your default shell as zsh (btw its better than bash)
->WIP: I have to make a dotfile backup and implement zsh dotfiles restoration in this script. Currently I have only writtern command to change the propmt theme.
->NOTE: If you already have your dotfiles mention them in your copy of script (it is basically just copy and pasting commands).
-Just make this executible and run it WITHOUT sudo.
-```
-chmod +x zsh-install.sh
-./zsh-install.sh
-```
-And you are done.
-
-#### V. My Programming Essentials
+#### IV. My Programming Essentials
 `programming-essentials.sh` script will make some changes to `/etc/pacman.conf` and include `multilib` repository and install some of my essential programming tools and applications which are:
 * `wine` Windows compatibility layer to run MS-Windows Application (mainly Borland C++, cause gcc acts weird in my laptop)
 * `code` Visual Studio Code to execute and write code in various languages (btw I also use neovim so don't bash me as normie)
