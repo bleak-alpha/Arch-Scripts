@@ -28,17 +28,17 @@ There are 3 scipts for 3 graphical environments which I use i.e. `DWM`, `KDE Pla
 ###### 1. [DWM](https://wiki.archlinux.org/index.php/Dwm):
 `dwm-install.sh` script will install dwm from repository which has many configs that I made, [click here](https://github.com/bleak-alpha/dwm-set/) to check those configs and it will also install require prerequisites neccessary for dwm to run.
 The script will automaticaly create an xinitrc file (if not present) and make the required changes to start dwm with x automatically.
-Just change the script to an executible and run the it as sudo.
+Just change the script to an executible and run it.
 ```
 chmod +x ./dwm-install.sh
-sudo ./dwm-install.sh
+./dwm-install.sh
 ```
 ###### 2. [KDE Plasma](https://wiki.archlinux.org/index.php/KDE):
 `kde-install.sh` script will install `plasma` and `kde-applications` from the arch repository.
-Just make this script executible and run it as sudo.
+Just make this script executible and run it.
 ```
 chmod +x kde-install.sh
-sudo ./kde-install.sh
+./kde-install.sh
 ```
 The script will automatically create an xinitrc file (if not present) and make the required changes to start kde with x automatically.
 If you want to start kde with a display manager, it will have sddm installed with it. Just enable the sddm service and start it
@@ -49,7 +49,7 @@ sudo systemctl start sddm
 
 ###### 3. [Gnome](https://wiki.archlinux.org/index.php/GNOME):
 `gnome-install.sh` script will install `gnome` and `gnome-extra` (for customizability) from the arch repository
-Just make this script executible and run it as sudo.
+Just make this script executible and run it.
 ```
 chmod +x gnome-install.sh
 sudo ./gnome-install.sh
@@ -93,9 +93,9 @@ After its done installing `paru`, `paru` will download and install these aur pac
 * `jre-openjdk` Java Runtime Environment for writing and testing Java code
 * `rust` Rust programming language to create and test applications
 * `ghc` `cabal-install` `stack` Tools needed to run HasKell Server, and to test HasKell code.
-Just make script executible and run it as sudo.
+Just make script executible and run it.
 ```
 chmod +x programming-essentials.sh
-sudo ./programming-essentials.sh
+./programming-essentials.sh
 ```
 These are my required applications. If you have some other requirments, make changes that fit your needs and run the script ;) and its not that hard to create shell scripts if you are already familiar with programming, it took me around 30 mins to understand few syntaxes and control structures.
